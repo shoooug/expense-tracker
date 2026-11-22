@@ -1,0 +1,16 @@
+print("Welcome to Monthly Budget Calculator")
+budget = float(input("Enter your monthly budget: "))
+total_expenses = 0
+answer = "yes"
+while answer == "yes":
+    expense = float(input("Enter expense amount: "))
+    total_expenses += expense
+    answer = input("Do you want to add another expense? (yes/no): ")
+    remaining_balance = budget - total_expenses
+    print("Total Expenses:", total_expenses)
+    print("Remaining Balance:", remaining_balance)
+    if remaining_balance < 0:
+        print(" over budget!")
+    else:
+        print(" within budget.")
+print ("End")            
